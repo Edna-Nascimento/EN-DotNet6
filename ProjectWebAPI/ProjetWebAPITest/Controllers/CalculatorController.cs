@@ -13,7 +13,7 @@ namespace ProjetWebAPITest.Controllers
             _logger = logger;
         }
 
-        [HttpGet("sum/{firstNumber}/{secondNumber}")]
+        [HttpGet("sun/{firstNumber}/{secondnumber}")]
         public IActionResult Sun(string firstNumber, string secondnumber)
         {
             if (IsNumeric(firstNumber) && IsNumeric(secondnumber))
