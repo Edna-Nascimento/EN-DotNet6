@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProjectWebAPI.Controllers
+namespace ProjetWebAPITest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class CalculatorController : ControllerBase
-    {    
+    {
         private readonly ILogger<CalculatorController> _logger;
 
         public CalculatorController(ILogger<CalculatorController> logger)
@@ -96,19 +96,19 @@ namespace ProjectWebAPI.Controllers
             double number;
             bool isNumber;
 
-            return isNumber = double.TryParse(strNumber, System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out number) ;
+            return isNumber = double.TryParse(strNumber, System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out number);
         }
 
         private decimal ConvertToDecimal(string strNumber)
         {
             decimal decimalValue;
 
-            if(decimal.TryParse(strNumber, out decimalValue))
+            if (decimal.TryParse(strNumber, out decimalValue))
             {
                 return decimalValue;
             }
 
             return 0;
-        }      
+        }
     }
 }
